@@ -1,0 +1,28 @@
+body {
+  background-color: #D6FFF6;
+}
+
+.mainbody {
+  background-color: #006BA6;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  position: relative;
+}
+
+.me {
+  color: #FF6B35;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+img {
+  opacity: .3;
+}
