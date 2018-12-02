@@ -2,27 +2,49 @@ body {
   background-color: #D6FFF6;
 }
 
-.mainbody {
-  background-color: #006BA6;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 45px;
+  height: 500px;
 }
 
-.container {
-  position: relative;
+.jumbotron .h1, .jumbotron h1 {
+  color: inherit
 }
 
-.me {
-  color: #FF6B35;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200
 }
 
-img {
-  opacity: .3;
+.jumbotron>hr {
+  border-top-color: #d5d5d5
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 6px
+}
+
+.jumbotron .container {
+  max-width: 100%
+}
+
+@media screen and (min-width:768px) {
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px
+  }
+
+  .container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px
+  }
+
+  .jumbotron .h1, .jumbotron h1 {
+    font-size: 63px
+  }
 }
