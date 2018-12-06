@@ -66,11 +66,6 @@ img {
     font-size: 63px;
   }
 
-  .container-fluid {
-    /*padding-bottom: 60px;*/
-    /*height: 400px;*/
-    /*background-color: #248232; */
-  }
 
   .col-sm-4 p {
     font-size: 26px;
@@ -98,10 +93,13 @@ img {
   .col-sm-6 p {
     font-size: 26px;
     color: #FFFFFF;
+
   }
 
   a {
     color: #FFFFFF;
     text-decoration: none;
   }
+
+
 }
