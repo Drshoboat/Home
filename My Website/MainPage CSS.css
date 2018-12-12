@@ -13,6 +13,7 @@ img {
 }
 
 .jumbotron {
+  padding: 0px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 45px;
@@ -67,6 +68,7 @@ img {
   }
 
   .container-fluid {
+    max-width: 1140px;
     /*padding-bottom: 60px;*/
     /*height: 400px;*/
     /*background-color: #248232; */
