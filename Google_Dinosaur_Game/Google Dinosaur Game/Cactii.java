@@ -25,9 +25,8 @@ public class Cactii extends Actor
        int x = getX();
        int y = getY();
        
-       if(x > 0) {
-           x -= 5;
-        }
+       x -= 5;
+       
         setLocation(x, y);
     }
     

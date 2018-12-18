@@ -42,8 +42,9 @@ public class MemeDinoBoi extends Actor
     
     public void hitDetection() {
         if(isTouching(Cactii.class)) {
-            getWorld().showText("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", getWorld().getWidth()/2, getWorld().getHeight()/2);
-            // to have and end game screen, use GreenfootImage
+            //getWorld().showText("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", getWorld().getWidth()/2, getWorld().getHeight()/2);
+            setImage(new GreenfootImage("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", 35, Color.BLACK, null));
+            setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();
         }
     }
