@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    ArrayList<Cactii> cactus = new ArrayList<Cactii>();
+    //ArrayList<Cactii> cactus = new ArrayList<Cactii>();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,10 +30,10 @@ public class MyWorld extends World
     private void prepare()
     {
         MemeDinoBoi memeDinoBoi = new MemeDinoBoi();
-        //Cactii cactii = new Cactii();
+        Cactii cactii = new Cactii();
         addObject(memeDinoBoi, 99, getHeight()/2);
-        //addObject(cactii, 850, getHeight()/2);
+        addObject(cactii, 850, getHeight()/2);
         
-        cactus.add(new Cactii());
+        //cactus.add(new Cactii());
     }
 }

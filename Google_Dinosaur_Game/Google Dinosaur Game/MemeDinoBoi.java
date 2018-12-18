@@ -24,6 +24,7 @@ public class MemeDinoBoi extends Actor
        if(Greenfoot.isKeyDown("space") && getY() > getWorld().getHeight() -getWorld().getHeight()/2) {
            jump();
         }
+       hitDetection();
     } 
     
     public void fall() {
@@ -37,5 +38,13 @@ public class MemeDinoBoi extends Actor
     
     public void jump() {
         velocity = -15;
+    }
+    
+    public void hitDetection() {
+        if(isTouching(Cactii.class)) {
+            getWorld().showText("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", getWorld().getWidth()/2, getWorld().getHeight()/2);
+            // to have and end game screen, use GreenfootImage
+            Greenfoot.stop();
+        }
     }
 }
