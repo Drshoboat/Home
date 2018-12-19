@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.lang.Math;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -8,12 +9,11 @@ import java.util.*;
  */
 public class MyWorld extends World
 {
-
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    //ArrayList<Cactii> cactus = new ArrayList<Cactii>();
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,12 +30,18 @@ public class MyWorld extends World
     private void prepare()
     {
         MemeDinoBoi memeDinoBoi = new MemeDinoBoi();
-        Cactii cactii = new Cactii();
+        //Cactii cactii = new Cactii();
         addObject(memeDinoBoi, 99, getHeight()/2);
-        addObject(cactii, 850, getHeight()/2);
-        
-        //cactus.add(new Cactii());
+        addObject(new Cactii(), 850, getHeight()/2);
+        addObject(new Cactii(), 900, getHeight()/2);
     }
     
-    
+    public void act(){
+        if(getObjects(Cactii.class).get(0).getX() < -100) {
+            removeObjects(getObjects(Cactii.class));
+            for(int i = 0; i < (int)(Math.random() * 2) + 2; i++){
+                addObject(new Cactii(), (int)(Math.random()* 300) + 850, getHeight()/2);
+            }
+        }
+    }
 }
