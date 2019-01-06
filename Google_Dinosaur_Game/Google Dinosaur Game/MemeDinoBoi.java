@@ -12,9 +12,9 @@ public class MemeDinoBoi extends Actor
      * Act - do whatever the MemeDinoBoi wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private final int GRAVITY = 1;
+    private final int GRAVITY = 2;
     private int velocity;
-    
+    private boolean stopped = false; 
     public MemeDinoBoi() {
         velocity = 0;
     }
@@ -37,15 +37,21 @@ public class MemeDinoBoi extends Actor
     }
     
     public void jump() {
-        velocity = -15;
+        velocity = -35;
     }
     
     public void hitDetection() {
+        //boolean stopped = false;
         if(isTouching(Cactii.class)) {
-            //getWorld().showText("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", getWorld().getWidth()/2, getWorld().getHeight()/2);
-            setImage(new GreenfootImage("Game Over!!! Dang You Suck at This Game BOIIIIII!!!!", 35, Color.BLACK, null));
-            setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
+            //setImage(new GreenfootImage("GameOver!!! Press Space to restart", 35, Color.BLACK, null));
+            //setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
+            
             Greenfoot.stop();
+            //stopped = true;
         }
+        
+
     }
+    
+
 }

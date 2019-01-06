@@ -27,7 +27,7 @@ public class Cactii extends Actor
        
        x -= 5;
        
-        setLocation(x, y);
+       setLocation(x, y);
     }
     
     
