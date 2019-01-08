@@ -6,24 +6,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameOver extends Actor
+public class GameOver extends World
 {
+
     /**
-     * Act - do whatever the GameOver wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor for objects of class GameOver.
+     * 
      */
-    public void act() 
-    {
-        hitDetection();
-    }  
+    public GameOver()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(800, 600, 1); 
+        act();
+    }
     
-    public void hitDetection() {
-        boolean stopped = false;
-        if(isTouching(Cactii.class)) {
-            Greenfoot.delay(1);
-            setImage(new GreenfootImage("GameOver!!! Press Space to restart", 35, Color.BLACK, null));
-            setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
+    public void act() {
+        if(Greenfoot.isKeyDown("space")) {
+            Greenfoot.delay(5);
+            Greenfoot.setWorld(new MyWorld());
         }
-       
     }
 }

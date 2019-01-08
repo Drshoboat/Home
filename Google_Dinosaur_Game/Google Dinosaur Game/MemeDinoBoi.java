@@ -43,10 +43,12 @@ public class MemeDinoBoi extends Actor
     public void hitDetection() {
         //boolean stopped = false;
         if(isTouching(Cactii.class)) {
+            getWorld().removeObjects(getWorld().getObjects(null));
+            
             //setImage(new GreenfootImage("GameOver!!! Press Space to restart", 35, Color.BLACK, null));
             //setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
+            Greenfoot.setWorld(new GameOver());
             
-            Greenfoot.stop();
             //stopped = true;
         }
         
