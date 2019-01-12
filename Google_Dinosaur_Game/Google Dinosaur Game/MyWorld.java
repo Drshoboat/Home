@@ -4,23 +4,23 @@ import java.lang.Math;
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class MyWorld extends World
 {
     /**
      * Constructor for objects of class MyWorld.
-     * 
+     *
      */
-    
+
     public MyWorld()
-    {    
+    {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1, false); 
-        
+        super(800, 600, 1, false);
+
         prepare();
-        
+
     }
 
     /**
@@ -35,7 +35,7 @@ public class MyWorld extends World
         addObject(new Cactii(), 850, getHeight()/2);
         addObject(new Cactii(), 900, getHeight()/2);
     }
-    
+
     public void act(){
         if(getObjects(Cactii.class).get(0).getX() < -100) {
             removeObjects(getObjects(Cactii.class));
@@ -44,6 +44,6 @@ public class MyWorld extends World
             }
         }
     }
-    
+
 
 }
