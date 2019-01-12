@@ -45,11 +45,5 @@ public class MyWorld extends World
         }
     }
     
-    public void stopped() {
-        GameOver gameover = new GameOver();
-        addObject(gameover, 355, 300);
-        if(Greenfoot.isKeyDown("space")){
-            Greenfoot.setWorld(new MyWorld());
-        }
-    }
+
 }
