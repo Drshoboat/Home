@@ -37,7 +37,7 @@ public class MemeDinoBoi extends Actor
     }
     
     public void jump() {
-        velocity = -35;
+        velocity = -40;
     }
     
     public void hitDetection() {

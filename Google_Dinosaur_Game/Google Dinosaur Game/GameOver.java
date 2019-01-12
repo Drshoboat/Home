@@ -14,16 +14,8 @@ public class GameOver extends Actor
      */
     public void act() 
     {
-        hitDetection();
+        
     }  
     
-    public void hitDetection() {
-        boolean stopped = false;
-        if(isTouching(Cactii.class)) {
-            Greenfoot.delay(1);
-            setImage(new GreenfootImage("GameOver!!! Press Space to restart", 35, Color.BLACK, null));
-            setLocation(getWorld().getWidth()/2, getWorld().getHeight()/2);
-        }
-       
-    }
+
 }
