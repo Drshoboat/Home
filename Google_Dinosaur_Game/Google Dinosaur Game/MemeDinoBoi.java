@@ -14,7 +14,7 @@ public class MemeDinoBoi extends Actor
      */
     private final int GRAVITY = 2;
     private int velocity;
-    private boolean stopped = false; 
+    
     public MemeDinoBoi() {
         velocity = 0;
     }

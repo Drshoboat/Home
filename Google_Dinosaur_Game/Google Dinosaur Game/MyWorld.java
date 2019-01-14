@@ -30,10 +30,13 @@ public class MyWorld extends World
     private void prepare()
     {
         MemeDinoBoi memeDinoBoi = new MemeDinoBoi();
+        CurrentScore score = new CurrentScore();
         //Cactii cactii = new Cactii();
+        addObject(score, getWidth() - 100, 200);
         addObject(memeDinoBoi, 99, getHeight()/2);
         addObject(new Cactii(), 850, getHeight()/2);
         addObject(new Cactii(), 900, getHeight()/2);
+        
     }
 
     public void act(){
@@ -44,6 +47,4 @@ public class MyWorld extends World
             }
         }
     }
-
-
 }
