@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      *
      */
-
+    
     public MyWorld()
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -31,9 +31,7 @@ public class MyWorld extends World
     {
         MemeDinoBoi memeDinoBoi = new MemeDinoBoi();
         CurrentScore score = new CurrentScore();
-        HighScore hscore = new HighScore();
         //Cactii cactii = new Cactii();
-        addObject(hscore, getWidth() - 200, 200);
         addObject(score, getWidth() - 100, 200);
         addObject(memeDinoBoi, 99, getHeight()/2);
         addObject(new Cactii(), 850, getHeight()/2);
