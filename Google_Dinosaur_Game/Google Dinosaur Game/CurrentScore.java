@@ -13,6 +13,7 @@ public class CurrentScore extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int score = 0;
+    public int hscore = 0;
     private UserInfo player;
 
     public void CurrentScore() {
@@ -31,8 +32,8 @@ public class CurrentScore extends Actor
 
     public void addedToWorld(World world)
     {
-        setImage(new GreenfootImage("Score : " + score, 27, new Color(8, 204, 93), null));
-        setLocation(710,20);
+            setImage(new GreenfootImage("Hi-Score: " + player.getScore() + "Score : " + score, 27, new Color(8, 204, 93), null));
+        setLocation(600,20);
     }
 
     public void whatsDaScore() {
@@ -40,15 +41,22 @@ public class CurrentScore extends Actor
         long start = System.nanoTime() / 10000;
         long end = (System.nanoTime() / 10000)  - start;
         score += (int)end;
-        player.setScore(score);//43
-        player.store();
+        //player.setScore(score);//43
+        //player.store();
         updateScore();
 
     }
-
+    
+    public void highScore() {
+        if(score > hscore) {
+            player.setScore(hscore);
+            player.store();
+        }
+    }
+    
     public void updateScore() {
-        setImage(new GreenfootImage("Score : " + score, 27, new Color(8, 204, 93), null));
-        setLocation(710,20);
+        setImage(new GreenfootImage("Hi-Score: " + player.getScore() + "Score : " + score, 27, new Color(8, 204, 93), null));
+        setLocation(600,20);
     }
 
 }
