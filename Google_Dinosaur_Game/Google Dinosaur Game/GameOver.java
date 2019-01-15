@@ -22,7 +22,7 @@ public class GameOver extends World
 
     public void act() {
         if(Greenfoot.isKeyDown("space")) {
-            Greenfoot.delay(5);
+            Greenfoot.delay(0);
             Greenfoot.setWorld(new MyWorld());
         }
     }
