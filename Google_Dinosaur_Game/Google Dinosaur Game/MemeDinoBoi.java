@@ -12,7 +12,7 @@ public class MemeDinoBoi extends Actor
      * Act - do whatever the MemeDinoBoi wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private final int GRAVITY = 2;
+    private final int GRAVITY = 1;
     private int velocity;
     
     public MemeDinoBoi() {
@@ -37,7 +37,7 @@ public class MemeDinoBoi extends Actor
     }
     
     public void jump() {
-        velocity = -40;
+        velocity = -22;
     }
     
     public void hitDetection() {
